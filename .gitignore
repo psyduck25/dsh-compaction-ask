@@ -1,0 +1,8 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+.rollback-*/
+_*.txt
+_*.md
+*.tgz

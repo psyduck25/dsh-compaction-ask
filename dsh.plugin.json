@@ -1,0 +1,13 @@
+{
+  "id": "dsh-external/dsh-compaction-ask",
+  "version": "2.3.0",
+  "main": "./lib/index.js",
+  "description": "Ask before context compaction: no automatic compaction, prompt at your threshold, with a settings page, summary quality tiers, and full recovery of the compressed originals.",
+  "contributes": {
+    "tools": [],
+    "skills": []
+  },
+  "client": {
+    "main": "./lib/client.js"
+  }
+}

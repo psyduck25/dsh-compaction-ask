@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.rollback-*/
+_*.txt
+_*.md
+*.tgz

@@ -1,0 +1,71 @@
+{
+  "name": "dsh-compaction-ask",
+  "version": "2.3.0",
+  "description": "Ask before context compaction: no automatic compaction, prompt at your threshold, with a settings page, summary quality tiers, and full recovery of the compressed originals.",
+  "type": "module",
+  "license": "MIT",
+  "author": "psyduck25",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "context",
+    "compaction",
+    "compression",
+    "summarization"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psyduck25/dsh-compaction-ask.git"
+  },
+  "homepage": "https://github.com/psyduck25/dsh-compaction-ask#readme",
+  "bugs": {
+    "url": "https://github.com/psyduck25/dsh-compaction-ask/issues"
+  },
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./guard": "./lib/guard.js",
+    "./summarizer": "./lib/summarizer.js",
+    "./bc-strategy": "./lib/bc-strategy.js",
+    "./conflicts": "./lib/conflicts.js",
+    "./recover": "./lib/recover.js",
+    "./recover-tool": "./lib/recover-tool.js",
+    "./philosophy": "./lib/philosophy.js",
+    "./range": "./lib/range.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "dsh.plugin.json",
+    "icon.svg",
+    "README.md",
+    "tools/*.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "scripts": {
+    "sync": "node tools/sync-preset.mjs",
+    "check": "node tools/sync-preset.mjs --check",
+    "test": "node tools/range-test.mjs && node tools/bc-strategy-test.mjs && node tools/recover-test.mjs && node tools/quality-test.mjs && node tools/conflicts-test.mjs && node tools/philosophy-test.mjs && node tools/row-startup-test.mjs && node tools/smoke.mjs && node tools/routes-test.mjs && node tools/client-test.mjs",
+    "recover": "node tools/recover.mjs"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

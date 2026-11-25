@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Ask before compaction",
+    "description": "Turns off automatic context compaction and asks you at a configurable threshold (60% by default): compact now, skip, or stop asking for this session. Its settings page edits the parameters; after a DSH upgrade, Repair re-syncs the preset snapshot with the installed version."
+  }
+}
