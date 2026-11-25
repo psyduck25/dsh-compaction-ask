@@ -1,6 +1,6 @@
 {
   "name": "dsh-compaction-ask",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Ask before context compaction: no automatic compaction, prompt at your threshold, with a settings page, summary quality tiers, and full recovery of the compressed originals.",
   "type": "module",
   "license": "MIT",
